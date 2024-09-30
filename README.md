@@ -1,6 +1,6 @@
-# Tool to create an autodicover.xml and autoconfig.xml file
+# autodicover.xml and autoconfig.xml 
 
-The feature in many  MUAs(Mail User Agents) is the email servers autodiscovering. When you type your e-mail address in their setup window, some MUAs are trying to determine what IMAP/POP3 servers to use.To do this, they assume, that your email contains a server domain name. They use this domain name to access its website to get an xml config setup file like autoconfig.xml
+The feature in many MUAs(Mail User Agents) is the email servers autodiscovering. When you type your e-mail address in their setup window, some MUAs are trying to determine what IMAP/POP3 servers to use.To do this, they assume, that your email contains a server domain name. They use this domain name to access its website to get an xml config setup file like autoconfig.xml
 ,config-v1.1.xml, autodiscover.xml ....
 
 There are at the moment 2 main xml structured files:
