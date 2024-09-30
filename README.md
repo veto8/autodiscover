@@ -102,21 +102,17 @@ K-9 Android Mail lookups:
 ```
 
 
-Example for nginx redirects 
+Example for nginx proxy 
 /etc/nginx.conf
 ```
-server {
-    server_name autoconfig.myotherdomain.com;
-    rewrite ^.* https://mydomain.com/config-v1.1.xml permanent;
+location /autodiscover/autodiscover.xml {
+    proxy_pass https://ams.ddit-server.com/autodiscover.xml;
+}
+location /AutoDiscover/AutoDiscover.xml {
+    proxy_pass https://ams.ddit-server.com/autodiscover.xml;
+}
+location /.well-known/autoconfig/mail/config-v1.1.xml {
+ proxy_pass https://ams.ddit-server.com/autoconfig.xml;
 }
 ```
 
-/etc/nginx.conf
-
-```
-server {
-    server_name autodiscover.myotherdomain.com;
-    rewrite ^.* https://mydomain.com/autodiscover.xml permanent;
-}
-```
-ref: https://www.rzegocki.pl/blog/adding-email-server-autoconfig-and-autodiscover/ 
